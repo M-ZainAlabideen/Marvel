@@ -1,0 +1,17 @@
+<resources>
+    <!-- Spacing -->
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="margin_start">22dp</dimen>
+    <dimen name="margin_bottom">32dp</dimen>
+
+    <!-- Font Sizes -->
+    <dimen name="font_small">12sp</dimen>
+    <dimen name="font_medium">16sp</dimen>
+    <dimen name="font_large">24sp</dimen>
+
+    <!-- Heights and Widths -->
+    <dimen name="text_width">130dp</dimen>
+    <dimen name="text_height">40dp</dimen>
+    <dimen name="image_height">200dp</dimen>
+
+</resources>
