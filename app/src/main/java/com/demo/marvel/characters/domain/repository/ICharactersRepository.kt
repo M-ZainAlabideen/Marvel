@@ -1,6 +1,6 @@
 package com.demo.marvel.characters.domain.repository
 
-import com.demo.marvel.shared.data.model.GetCharacters
+import com.demo.marvel.characters.data.model.GetCharacters
 import retrofit2.Response
 
 

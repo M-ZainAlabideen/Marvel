@@ -3,7 +3,7 @@ package com.demo.marvel.characters.presentation.viewModel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.demo.marvel.characters.domain.repository.ICharactersRepository
-import com.demo.marvel.shared.data.model.Character
+import com.demo.marvel.characters.data.model.Character
 import com.demo.marvel.shared.util.NetworkUtils.generateHash
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow

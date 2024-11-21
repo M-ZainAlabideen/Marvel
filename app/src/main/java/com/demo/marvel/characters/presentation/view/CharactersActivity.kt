@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.demo.marvel.characters.presentation.adapter.CharactersAdapter
 import com.demo.marvel.characters.presentation.viewModel.CharactersViewModel
 import com.demo.marvel.databinding.ActivityCharactersBinding
-import com.demo.marvel.shared.data.model.Character
+import com.demo.marvel.characters.data.model.Character
 import com.demo.marvel.shared.util.Logger.logError
 import com.demo.marvel.shared.util.disableShimmer
 import com.demo.marvel.shared.util.enableShimmer

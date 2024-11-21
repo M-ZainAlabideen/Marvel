@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.demo.marvel.R
 import com.demo.marvel.databinding.ItemCharacterBinding
-import com.demo.marvel.shared.data.model.Character
+import com.demo.marvel.characters.data.model.Character
 import com.demo.marvel.shared.util.loadImage
 import kotlin.properties.Delegates
 

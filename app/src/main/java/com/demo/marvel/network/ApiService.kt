@@ -1,7 +1,7 @@
 package com.demo.marvel.network
 
 import com.demo.marvel.BuildConfig
-import com.demo.marvel.shared.data.model.GetCharacters
+import com.demo.marvel.characters.data.model.GetCharacters
 import com.demo.marvel.shared.util.Constants.API_KEY
 import com.demo.marvel.shared.util.Constants.HASH
 import com.demo.marvel.shared.util.Constants.TS

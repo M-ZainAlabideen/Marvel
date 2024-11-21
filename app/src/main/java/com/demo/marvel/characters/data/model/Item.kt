@@ -1,4 +1,4 @@
-package com.demo.marvel.shared.data.model
+package com.demo.marvel.characters.data.model
 
 data class Item(
     val name: String,

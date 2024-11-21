@@ -1,4 +1,4 @@
-package com.demo.marvel.shared.data.model
+package com.demo.marvel.characters.data.model
 
 import com.demo.marvel.shared.util.Constants.HTTP
 import com.demo.marvel.shared.util.Constants.HTTPS
