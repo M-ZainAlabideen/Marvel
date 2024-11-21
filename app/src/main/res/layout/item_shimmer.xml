@@ -6,7 +6,6 @@
     android:padding="@dimen/padding_small"
     android:background="@color/light_gray">
 
-    <!-- Placeholder for the image -->
     <View
         android:id="@+id/shimmer_image_placeholder"
         android:layout_width="match_parent"
@@ -16,7 +15,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Placeholder for the text -->
     <View
         android:layout_width="@dimen/text_width"
         android:layout_height="@dimen/text_height"
