@@ -5,6 +5,7 @@ plugins {
     alias(libs.plugins.hilt.android)
 }
 
+
 android {
     namespace = "com.demo.marvel"
     compileSdk = 34
@@ -22,11 +23,28 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        //high level of security for private keys specific
+        val publicKey = project.findProperty("MARVEL_PUBLIC_KEY") as? String ?: ""
+        val privateKey = project.findProperty("MARVEL_PRIVATE_KEY") as? String ?: ""
+        buildConfigField("String", "MARVEL_PUBLIC_KEY", "\"$publicKey\"")
+        buildConfigField("String", "MARVEL_PRIVATE_KEY", "\"$privateKey\"")
+    }
+
+    buildFeatures {
+        buildConfig = true
     }
 
     buildTypes {
-        release {
-            isMinifyEnabled = false
+        getByName("debug") {
+            //low level of security, suitable for public keys
+            buildConfigField("String", "MARVEL_PUBLIC_KEY", "\"884f51f9b171f337b140b845be196cb4\"")
+            buildConfigField("String", "MARVEL_PRIVATE_KEY", "\"79b49267c2e7e6e42d21a2c577f58c3b804874fd\"")
+        }
+        getByName("release") {
+            buildConfigField("String", "MARVEL_PUBLIC_KEY", "\"884f51f9b171f337b140b845be196cb4\"")
+            buildConfigField("String", "MARVEL_PRIVATE_KEY", "\"79b49267c2e7e6e42d21a2c577f58c3b804874fd\"")
+            isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"

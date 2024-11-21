@@ -11,6 +11,9 @@ import com.demo.marvel.characters.presentation.viewModel.CharactersViewModel
 import com.demo.marvel.databinding.ActivityCharactersBinding
 import com.demo.marvel.shared.data.model.Character
 import com.demo.marvel.shared.util.Logger.logError
+import com.demo.marvel.shared.util.disableShimmer
+import com.demo.marvel.shared.util.enableShimmer
+import com.demo.marvel.shared.util.longToast
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -52,15 +55,8 @@ class CharactersActivity : AppCompatActivity() {
     private fun observeLoadingProgress() {
         lifecycleScope.launch {
             charactersViewModel.loading.collect { loading ->
-                if (loading) {
-                    binding.shimmerContainer.startShimmer()
-                    binding.shimmerContainer.visibility = View.VISIBLE
-                    binding.rvCharacters.visibility = View.GONE
-                } else {
-                    binding.shimmerContainer.stopShimmer()
-                    binding.shimmerContainer.visibility = View.GONE
-                    binding.rvCharacters.visibility = View.VISIBLE
-                }
+                if (loading) binding.shimmerContainer.enableShimmer()
+                else binding.shimmerContainer.disableShimmer()
             }
         }
     }
@@ -74,6 +70,7 @@ class CharactersActivity : AppCompatActivity() {
         //show character Details with bottom sections(comics,events,...etc)
         //use clean architecture and MVVM Design architecture like first screen
         //when click the image of any item in bottom sections wen can use any ImageViewer library to show image such as: StfalconImageViewer library
+        this.longToast("Character Details:\n Character Name: " + character.name + "\n Character Description: " + character.description)
     }
 
     private fun observeFailure() {
